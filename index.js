@@ -52,7 +52,7 @@ fetch(postsUrl)
 .catch(reason => console.log("error when feching data: ",reason))
 .finally((console.log("done processing request")));
 
-async function preocessPosts() {
+async function processPosts() {
     const response = await fetch(postsUrl);
     const data = await response.json();
     console.log("data in async await: ",data);
@@ -63,4 +63,4 @@ async function preocessPosts() {
         postsContainer.appendChild(postContainer);
     }
 }
-preocessPosts();
+processPosts();
